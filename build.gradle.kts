@@ -9,7 +9,7 @@ buildscript {
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.42")
         classpath("org.jetbrains.kotlin:kotlin-serialization:1.7.10")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3")
-        classpath("com.google.gms:google-services:4.3.14")
+        classpath("com.google.gms:google-services:4.3.15")
         val navVersion = "2.5.3"
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion")
 

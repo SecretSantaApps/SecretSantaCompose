@@ -1,4 +1,4 @@
-package ru.kheynov.santa.ui.theme
+package ru.kheynov.santa.core_ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

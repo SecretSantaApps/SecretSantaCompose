@@ -1,19 +1,22 @@
-package ru.kheynov.santa.ui.theme
+package ru.kheynov.santa.core_ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import ru.kheynov.santa.core_ui.Dimensions
+import ru.kheynov.santa.core_ui.LocalSpacing
+
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
+    primary = Purple700,
     primaryVariant = Purple700,
     secondary = Teal200
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
+    primary = Purple700,
     primaryVariant = Purple700,
     secondary = Teal200
     
@@ -28,17 +31,22 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun SantaAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun SecretSantaTheme(
+    darkTheme: Boolean = /*isSystemInDarkTheme()*/ false,
+    content: @Composable ()
+    -> Unit,
+) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
         LightColorPalette
     }
-    
-    MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
-        content = content
-    )
+    CompositionLocalProvider(LocalSpacing provides Dimensions()) {
+        MaterialTheme(
+            colors = colors,
+            typography = Typography,
+            shapes = Shapes,
+            content = content
+        )
+    }
 }

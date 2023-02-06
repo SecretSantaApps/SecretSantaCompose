@@ -1,4 +1,4 @@
-package ru.kheynov.santa.ui.theme
+package ru.kheynov.santa.core_ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

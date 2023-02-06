@@ -10,13 +10,15 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import ru.kheynov.santa.ui.theme.SantaAppTheme
+import dagger.hilt.android.AndroidEntryPoint
+import ru.kheynov.santa.core_ui.theme.SecretSantaTheme
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SantaAppTheme {
+            SecretSantaTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -37,7 +39,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    SantaAppTheme {
+    SecretSantaTheme {
         Greeting("Android")
     }
 }
