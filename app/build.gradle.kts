@@ -15,7 +15,7 @@ android {
     
     defaultConfig {
         applicationId = "ru.kheynov.santa"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 33
         versionCode = 10
         versionName = "1.0.1"
@@ -138,4 +138,6 @@ dependencies {
     //Glide
     val glideVersion = "1.5.0"
 //    implementation("com.github.skydoves:landscapist-glide:$glideVersion")
+    
+    implementation("androidx.security:security-crypto:1.0.0")
 }
