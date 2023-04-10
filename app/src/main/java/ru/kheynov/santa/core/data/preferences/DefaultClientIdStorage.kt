@@ -1,8 +1,8 @@
 package ru.kheynov.santa.core.data.preferences
 
 import android.content.SharedPreferences
-import ru.kheynov.santa.core.domain.preferences.ClientIdStorage
 import java.util.*
+import ru.kheynov.santa.core.domain.preferences.ClientIdStorage
 
 class DefaultClientIdStorage(
     private val pref: SharedPreferences,
@@ -12,7 +12,7 @@ class DefaultClientIdStorage(
         pref.edit().putString(ClientIdStorage.ID_KEY, id).apply()
         id
     }
-    
+
     override fun getClientId(): String {
         return id
     }

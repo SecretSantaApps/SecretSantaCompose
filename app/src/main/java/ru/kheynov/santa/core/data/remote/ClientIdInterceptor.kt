@@ -16,4 +16,9 @@ class ClientIdInterceptor(
                 .build()
         return chain.proceed(newRequest)
     }
+
+    fun aboba() {
+        val list = listOf('1', '2')
+        list.map { it.uppercase() }
+    }
 }

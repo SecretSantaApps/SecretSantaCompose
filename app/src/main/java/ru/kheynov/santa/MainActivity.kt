@@ -12,8 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
-import ru.kheynov.santa.core_ui.theme.SecretSantaTheme
-import ru.kheynov.santa.login.presentation.screens.MainLoginScreen
+import ru.kheynov.santa.auth.presentation.screens.login.MainLoginScreen
+import ru.kheynov.santa.coreUi.theme.SecretSantaTheme
 
 private const val TAG = "MainActivity"
 
@@ -26,11 +26,11 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    color = MaterialTheme.colors.background,
                 ) {
                     MainLoginScreen(
-                        navigateToRegister = { Log.i(TAG, "Navigating to register") },
-                        navigateBack = { Log.i(TAG, "Navigating back") }
+                        navigateToSignUp = { Log.i(TAG, "Navigating to register") },
+                        navigateBack = { Log.i(TAG, "Navigating back") },
                     )
                 }
             }

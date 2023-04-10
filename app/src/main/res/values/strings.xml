@@ -9,6 +9,7 @@
     <string name="sign_up_button_text">Sign Up</string>
     <string name="login_button_text">Login</string>
     <string name="sign_in_via_google_text">Sign in via Google</string>
+    <string name="passwords_not_match">Password dont match</string>
 
 
 </resources>
